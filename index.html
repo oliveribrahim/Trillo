@@ -5,16 +5,22 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Trillo</title>
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Ionicons CDN for star icons -->
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" type="module"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
 
 <div class="container">
+    <!-- ================= HEADER ================= -->
     <header class="header">
-        <img src="img/logo.png" alt="Trillo Logo" class="logo">
+        <!-- Logo -->
+        <img alt="Trillo Logo" class="logo" src="img/logo.png">
 
-
-        <form class="search" action="#">
-            <input class="search__input" name="search" type="search" placeholder="Search hotels">
+        <!-- Search bar -->
+        <form action="#" class="search">
+            <input class="search__input" name="search" placeholder="Search hotels" type="search">
             <button class="search__button" type="submit">
                 <svg class="search__icon">
                     <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
@@ -22,6 +28,7 @@
             </button>
         </form>
 
+        <!-- User navigation (notifications + profile) -->
         <nav class="user--nav">
             <div class="user--nav__icon--box">
                 <svg class="user--nav__icon">
@@ -38,18 +45,184 @@
             </div>
 
             <div class="user--nav__user">
-                <img src="img/user.jpg" alt="User photo" class="user--nav__user--photo">
+                <img alt="User photo" class="user--nav__user--photo" src="img/user.jpg">
                 <span class="user--nav__user--name">Johnes</span>
             </div>
-
         </nav>
     </header>
+
     <div class="content">
+        <!-- ================= SIDEBAR ================= -->
         <nav class="sidebar">
-            navigation part
+            <ul class="side--nav">
+                <!-- Active item -->
+                <li class="side--nav__item side--nav__item--active">
+                    <a class="side--nav__link" href="#">
+                        <ion-icon class="side--nav__icon" name="home-outline"></ion-icon>
+                        <span>Hotel</span>
+                    </a>
+                </li>
+
+                <li class="side--nav__item">
+                    <a class="side--nav__link" href="#">
+                        <ion-icon class="side--nav__icon" name="airplane-outline"></ion-icon>
+                        <span>Flight</span>
+                    </a>
+                </li>
+
+                <li class="side--nav__item">
+                    <a class="side--nav__link" href="#">
+                        <ion-icon class="side--nav__icon" name="key-outline"></ion-icon>
+                        <span>Car Rantal</span>
+                    </a>
+                </li>
+
+                <li class="side--nav__item">
+                    <a class="side--nav__link" href="#">
+                        <ion-icon class="side--nav__icon" name="map-outline"></ion-icon>
+                        <span>Tours</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Legal notice -->
+            <div class="legal">
+                &copy; 2017 by trillo. All rights reserved.
+            </div>
         </nav>
+
+        <!-- ================= MAIN CONTENT ================= -->
         <main class="hotel--view">
-            hotel view part
+
+            <!-- Gallery section -->
+            <div class="gallery">
+                <figure class="gallery__item">
+                    <img alt="Photo of hotel 1" class="gallery__photo" src="img/hotel-1.jpg">
+                </figure>
+                <figure class="gallery__item">
+                    <img alt="Photo of hotel 2" class="gallery__photo" src="img/hotel-2.jpg">
+                </figure>
+                <figure class="gallery__item">
+                    <img alt="Photo of hotel 3" class="gallery__photo" src="img/hotel-3.jpg">
+                </figure>
+            </div>
+
+            <!-- Hotel overview (title, stars, location, rating) -->
+            <div class="overview">
+                <h1 class="overview__heading">Hotel Las Palmes</h1>
+
+                <!-- Rating stars -->
+                <div class="overview__stars">
+                    <ion-icon class="overview__icon--star" name="star"></ion-icon>
+                    <ion-icon class="overview__icon--star" name="star"></ion-icon>
+                    <ion-icon class="overview__icon--star" name="star"></ion-icon>
+                    <ion-icon class="overview__icon--star" name="star"></ion-icon>
+                    <ion-icon class="overview__icon--star" name="star"></ion-icon>
+                    <ion-icon class="overview__icon--star" name="star"></ion-icon>
+                </div>
+
+                <!-- Location -->
+                <div class="overview__location">
+                    <svg class="overview__icon--location">
+                        <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                    </svg>
+                    <button class="btn-inline">Albufeira, Portugal</button>
+                </div>
+
+                <!-- Rating box -->
+                <div class="overview__rating">
+                    <div class="overview__rating--average">8.6</div>
+                    <div class="overview__rating--count">429 Votes</div>
+                </div>
+            </div>
+
+            <!-- ================= DETAIL SECTION ================= -->
+            <div class="detail">
+                <!-- Hotel description -->
+                <div class="description">
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi dignissimos debitis ratione
+                        sapiente saepe. Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto
+                        voluptate.
+                    </p>
+                    <p class="paragraph">
+                        Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus,
+                        inventore iure aliquid aliquam.
+                    </p>
+
+                    <!-- Hotel features -->
+                    <ul class="list">
+                        <li class="list__item">close to the beach</li>
+                        <li class="list__item">Breakfast included</li>
+                        <li class="list__item">Free airport shuttle</li>
+                        <li class="list__item">Free wifi in all rooms</li>
+                        <li class="list__item">Air conditioning and heating</li>
+                        <li class="list__item">Pets allowed</li>
+                        <li class="list__item">We speak all languages</li>
+                        <li class="list__item">Perfect for families</li>
+                    </ul>
+
+                    <!-- Recommendation -->
+                    <div class="recommend">
+                        <p class="recommend__count">
+                            Lucy and 3 other friends recommend this hotel.
+                        </p>
+                        <div class="recommend__friends">
+                            <img alt="Friend 1" class="recommend__photo" src="img/user-3.jpg">
+                            <img alt="Friend 2" class="recommend__photo" src="img/user-4.jpg">
+                            <img alt="Friend 3" class="recommend__photo" src="img/user-5.jpg">
+                            <img alt="Friend 4" class="recommend__photo" src="img/user-6.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User reviews -->
+                <div class="user--review">
+                    <figure class="review">
+                        <blockquote class="review__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta
+                            animi, totam, itaque officia ex.
+                        </blockquote>
+                        <figcaption class="review__user">
+                            <img alt="User 1" class="review__photo" src="img/user-1.jpg">
+                            <div class="review__user--box">
+                                <p class="review__user--name">Nick Smith</p>
+                                <p class="review__user--date">Feb 23rd, 2025</p>
+                            </div>
+                            <div class="review__rating">7.8</div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="review">
+                        <blockquote class="review__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta
+                            animi, totam, itaque officia ex.
+                        </blockquote>
+                        <figcaption class="review__user">
+                            <img alt="User 2" class="review__photo" src="img/user-2.jpg">
+                            <div class="review__user--box">
+                                <p class="review__user--name">Nick Smith</p>
+                                <p class="review__user--date">Feb 23rd, 2025</p>
+                            </div>
+                            <div class="review__rating">7.8</div>
+                        </figcaption>
+                    </figure>
+
+                    <button class="btn-inline">Show all <span>→</span></button>
+                </div>
+
+            </div>
+
+            <!-- ================= CTA SECTION ================= -->
+            <div class="cta">
+                <div class="cta__book--now">
+                    Good news! We have 4 free rooms for your selected dats!
+                    <button class="btn">
+                        <span class="btn__visible"> Book Now</span>
+                        <span class="btn__invisible"> Only 4 Rooms Left</span>
+                    </button>
+                </div>
+            </div>
         </main>
     </div>
 </div>

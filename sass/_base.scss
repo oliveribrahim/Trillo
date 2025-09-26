@@ -13,8 +13,17 @@
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
 
-  --shadow-dark: 0 2rem 6rem rgba(0,0,0, 0.3);
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-ligh: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+
+  --line: 1px solid var(--color-grey-light-2);
 }
+
+$bp--largest: 75rem;      //1200px
+$bp--large: 68.75rem;     //1100px
+$bp--medium: 56.25rem;    //900px
+$bp--small: 37.5rem;      //600px
+$bp--smallest: 31.25rem;     //500px
 
 * {
   margin: 0;
@@ -28,6 +37,10 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px
+
+  @media only screen and (max-width: $bp--large) {
+    font-size: 50%;
+  }
 }
 
 body {
