@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Trillo</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <img src="img/logo.png" alt="Trillo Logo" class="logo">
+
+
+        <form class="search" action="#">
+            <input class="search__input" name="search" type="search" placeholder="Search hotels">
+            <button class="search__button" type="submit">
+                <svg class="search__icon">
+                    <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                </svg>
+            </button>
+        </form>
+
+        <nav class="user--nav">
+            <div class="user--nav__icon--box">
+                <svg class="user--nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                </svg>
+                <span class="user--nav__notification">13</span>
+            </div>
+
+            <div class="user--nav__icon--box">
+                <svg class="user--nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-chat"></use>
+                </svg>
+                <span class="user--nav__notification">7</span>
+            </div>
+
+            <div class="user--nav__user">
+                <img src="img/user.jpg" alt="User photo" class="user--nav__user--photo">
+                <span class="user--nav__user--name">Johnes</span>
+            </div>
+
+        </nav>
+    </header>
+    <div class="content">
+        <nav class="sidebar">
+            navigation part
+        </nav>
+        <main class="hotel--view">
+            hotel view part
+        </main>
+    </div>
+</div>
+
+</body>
+</html>
